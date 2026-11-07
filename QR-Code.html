@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        </style>
+</head>
+<body>
+    <div>
+        <h1>QR Code Generator</h1>
+        <input type="text" id="in">
+        <br><br><br>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="" id="img">
+        <br><br>
+        <button onclick="gen()">Generate</button>
+    </div>
+
+    <script>
+        function gen(){
+            let text = document.getElementById("in").value;
+            console.log(text)
+            let images = document.getElementById("img").src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+text;
+        }
+    </script>
+
+</body>
+</html>

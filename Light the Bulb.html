@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img{
+            width: 300px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button >Bulb on</button> -->
+    <img onclick="ToggleEvent()" src="https://www.w3schools.com/js/pic_bulboff.gif" id="demo">
+    <!-- <button onclick="off()">Bulb off</button> -->
+   
+
+
+
+
+    <script>
+
+        function on(){
+          document.getElementById("demo").src="https://www.w3schools.com/js/pic_bulbon.gif"
+        }
+        function off(){
+          document.getElementById("demo").src="https://www.w3schools.com/js/pic_bulboff.gif"
+        }
+
+        function ToggleEvent(){
+          var image = document.getElementById("demo");
+          if(image.src.match("bulbon")){
+            image.src="https://www.w3schools.com/js/pic_bulboff.gif";
+          }else{
+            image.src="https://www.w3schools.com/js/pic_bulbon.gif";
+          }
+        }
+    </script>
+</body>
+</html>
